@@ -1,0 +1,56 @@
+/* responsive.css */
+
+/* Dispositivos até 600px (celulares pequenos e médios) */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+  main {
+    padding: 15px;
+  }
+  .titulo {
+    font-size: 1.8em;
+  }
+  .formulario, .destaque, .como-funciona, .info-section, .seguranca, .aviso-importante {
+    padding: 15px;
+  }
+  .passo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .passo-numero {
+    margin-bottom: 10px;
+  }
+  button {
+    width: 100%;
+  }
+}
+
+/* Dispositivos de 601px até 1024px (tablets e notebooks pequenos) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  main {
+    padding: 25px;
+  }
+  .titulo {
+    font-size: 2.2em;
+  }
+  .passo {
+    gap: 10px;
+  }
+}
+
+/* Dispositivos maiores (desktops grandes e monitores) */
+@media (min-width: 1025px) {
+  body {
+    padding: 30px;
+  }
+  main {
+    padding: 40px;
+  }
+  .titulo {
+    font-size: 2.8em;
+  }
+  .formulario, .destaque, .como-funciona, .info-section, .seguranca, .aviso-importante {
+    padding: 30px;
+  }
+}

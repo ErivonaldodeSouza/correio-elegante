@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Importações de CSS -->
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/responsive.css">
+    <link rel="stylesheet" href="./src/css/style.css"> <!-- ESTE AQUI É O NOVO -->
+
+    <title>Correio do Amor 💖</title>
+</head>
+
+<body>
+    <main>
+        <div class="correio-do-amor">
+            <h1 class="titulo">💌 Correio do Amor 💖</h1>
+            <p class="descricao">
+                Quer se declarar para alguém, mas tem vergonha?
+                <strong>Eu faço isso pra você!!!</strong><br><br>
+                Preencha o formulário abaixo com o nome da pessoa que você quer se declarar e a mensagem que você gostaria de enviar.<br>
+                <em>⚠️ Você escreverá a mensagem, nós enviaremos o amor!</em>
+            </p>
+        </div>
+
+        <div class="destaque">
+            <h3>💰 Valor do Serviço</h3>
+            <p class="valor">R$ 5,00</p>
+            <p><small>Pagamento seguro via Mercado Pago</small></p>
+        </div>
+
+        <div class="formulario">
+            <h2 style="color: #e91e63; margin-bottom: 20px;">📝 Sua Declaração</h2>
+            <form>
+                <label for="name">💝 Nome da pessoa:</label>
+                <input type="text" id="name" name="name" placeholder="Digite o nome da pessoa especial..." required>
+
+                <label for="message">💌 Sua mensagem de amor:</label>
+                <textarea id="message" name="message" placeholder="Escreva aqui sua declaração de amor... (mínimo 10 caracteres)" required></textarea>
+
+                <button type="submit">🚀 Continuar para Pagamento</button>
+            </form>
+        </div>
+
+        <div class="como-funciona">
+            <h2 style="color: #f57c00; margin-bottom: 20px;">📋 Como Funciona</h2>
+            
+            <div class="passo">
+                <div class="passo-numero">1</div>
+                <div>Preencha o formulário com o nome da pessoa e sua mensagem</div>
+            </div>
+            
+            <div class="passo">
+                <div class="passo-numero">2</div>
+                <div>Realize o pagamento de R$ 5,00 via Mercado Pago (PIX, cartão, etc.)</div>
+            </div>
+            
+            <div class="passo">
+                <div class="passo-numero">3</div>
+                <div>Após confirmação, sua declaração será entregue pessoalmente!</div>
+            </div>
+            
+            <div class="passo">
+                <div class="passo-numero">4</div>
+                <div>A pessoa especial receberá sua mensagem com todo carinho! 💖</div>
+            </div>
+        </div>
+
+        <div class="mercadopago-info">
+            <h3>🛡️ Pagamento Seguro com Mercado Pago</h3>
+            <p>Aceitamos PIX, cartão de crédito, débito e outras formas de pagamento</p>
+        </div>
+
+        <div class="info-section">
+            <h2>💸 Outras Formas de Pagamento</h2>
+            
+            <h3>Pagamento em Dinheiro</h3>
+            <p>Procure alguém do 3º ano do Ensino Médio, se identifique com seu nome e série, e nos entregue sua carta e o nome da pessoa junto com o pagamento de <strong>R$ 5,00</strong>.</p>
+        </div>
+
+        <div class="seguranca">
+            <h2>🔒 Privacidade e Segurança</h2>
+            <p>
+                <strong>Pode ficar tranquilo!</strong> Não leremos sua carta para a pessoa remetente ou da nossa equipe.
+                Estaremos organizando tudo para que sua mensagem chegue ao destinatário com todo o carinho e cuidado, 
+                sem conhecimento prévio de nenhum indivíduo.
+            </p>
+            <p><strong>A privacidade é nossa prioridade!</strong></p>
+            
+            <h3>🛡️ Segurança do Pagamento</h3>
+            <p>
+                Todos os pagamentos são processados pelo <strong>Mercado Pago</strong>, uma das plataformas de pagamento 
+                mais seguras do Brasil. Seus dados financeiros estão protegidos com criptografia de ponta.
+            </p>
+        </div>
+
+        <div class="aviso-importante">
+            <h3>⚠️ Importante para o Desenvolvedor</h3>
+            <p>
+                <strong>Este sistema requer configuração adicional:</strong><br>
+                1. Obter chaves de API do Mercado Pago<br>
+                2. Configurar webhook para confirmação de pagamentos<br>
+                3. Implementar backend para processar pagamentos com segurança<br>
+                4. Atualizar a chave pública no JavaScript
+            </p>
+        </div>
+    </main>
+
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <script src="./src/js/index.js"></script>
+</body>
+</html>

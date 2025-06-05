@@ -1,0 +1,200 @@
+body {
+    font-family: 'Arial', sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    min-height: 100vh;
+}
+
+main {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.correio-do-amor {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.titulo {
+    color: #e91e63;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.descricao {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.formulario {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, textarea:focus {
+    outline: none;
+    border-color: #e91e63;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+button {
+    background: #e91e63;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: #c2185b;
+    transform: translateY(-2px);
+}
+
+.info-section {
+    background: #f1f8ff;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid #2196F3;
+    margin-bottom: 20px;
+}
+
+.info-section h2 {
+    color: #1976D2;
+    margin-bottom: 15px;
+}
+
+.info-section h3 {
+    color: #1565C0;
+    margin-bottom: 10px;
+}
+
+.destaque {
+    background: #fff3e0;
+    border: 2px solid #ff9800;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.destaque h3 {
+    color: #f57c00;
+    margin-bottom: 15px;
+}
+
+.valor {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #e91e63;
+}
+
+.seguranca {
+    background: #e8f5e8;
+    border: 2px solid #4caf50;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.seguranca h3 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+.como-funciona {
+    background: #fff8e1;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 30px 0;
+    border-left: 5px solid #ffc107;
+}
+
+.passo {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.passo-numero {
+    background: #e91e63;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.mercadopago-info {
+    text-align: center;
+    margin: 20px 0;
+    padding: 15px;
+    background: linear-gradient(45deg, #009ee3, #00b2ff);
+    color: white;
+    border-radius: 10px;
+}
+
+.aviso-importante {
+    background: #ffebee;
+    border: 2px solid #f44336;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    color: #c62828;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .titulo {
+        font-size: 2em;
+    }
+}
