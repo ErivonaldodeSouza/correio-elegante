@@ -198,3 +198,60 @@ button:hover {
         font-size: 2em;
     }
 }
+
+.tabela-precos {
+    background: #fff3f6;
+    border: 2px dashed #e91e63;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 30px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    position: relative;
+}
+
+.precos-titulo {
+    font-size: 1.8em;
+    color: #d81b60;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.precos-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.precos-lista li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px dotted #f8bbd0;
+    font-size: 1.2em;
+    color: #444;
+}
+
+.precos-lista li:last-child {
+    border-bottom: none;
+}
+
+.precos-lista .item {
+    text-align: left;
+    flex: 1;
+}
+
+.precos-lista .preco {
+    color: #e91e63;
+    font-weight: bold;
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+.precos-aviso {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #888;
+}
