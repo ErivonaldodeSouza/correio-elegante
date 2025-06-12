@@ -7,7 +7,7 @@
     <!-- Importações de CSS -->
     <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/responsive.css">
-    <link rel="stylesheet" href="./src/css/style.css"> <!-- ESTE AQUI É O NOVO -->
+    <link rel="stylesheet" href="./src/css/style.css">
 
     <title>Correio do Amor 💖</title>
 </head>
@@ -24,90 +24,72 @@
             </p>
         </div>
 
-        <div class="destaque">
-            <h3>💰 Valor do Serviço</h3>
-            <p class="valor">R$ 5,00</p>
-            <p><small>Pagamento seguro via Mercado Pago</small></p>
-        </div>
+    <div class="destaque tabela-precos">
 
-        <div class="formulario">
-            <h2 style="color: #e91e63; margin-bottom: 20px;">📝 Sua Declaração</h2>
-            <form>
-                <label for="name">💝 Nome da pessoa:</label>
-                <input type="text" id="name" name="name" placeholder="Digite o nome da pessoa especial..." required>
+    <h3 class="precos-titulo">📋 Tabela de Preços</h3>
+    <ul class="precos-lista">
+        <li><span class="item">Carta</span><span class="preco">R$ 2,00</span></li>
+        <li><span class="item">Carta + QR Code com música dedicada</span><span class="preco">R$ 2,50</span></li>
+        <li><span class="item">Carta + Sonho de Valsa</span><span class="preco">R$ 4,00</span></li>
+        <li><span class="item">Carta + Fini Beijinho</span><span class="preco">R$ 4,50</span></li>
+        <li><span class="item">Carta + Mini Buquê de Sonho de Valsa (unidade)</span><span class="preco">R$ 17,00</span></li>
+    </ul>
+    <p class="precos-aviso"><small>💳 Encomendas apenas presencialmente</small></p>
 
-                <label for="message">💌 Sua mensagem de amor:</label>
-                <textarea id="message" name="message" placeholder="Escreva aqui sua declaração de amor... (mínimo 10 caracteres)" required></textarea>
+    <div>
 
-                <button type="submit">🚀 Continuar para Pagamento</button>
-            </form>
-        </div>
+    <form action="https://formspree.io/f/mldnbbww" method="POST">
+    <label for="name">💝 Nome da pessoa:</label>
+    <input type="text" id="name" name="nome_da_pessoa" placeholder="Digite o nome da pessoa especial..." required>
+
+    <label for="message">💌 Sua mensagem de amor:</label>
+    <textarea id="message" name="mensagem_de_amor" placeholder="Escreva aqui sua declaração de amor..." required></textarea>
+
+    <!-- campo invisível para evitar spam -->
+    <input type="text" name="_gotcha" style="display:none">
+
+    <!-- redirecionamento opcional após envio -->
+    <input type="hidden" name="_redirect" value="https://sua-pagina-de-agradecimento.com">
+
+    <button type="submit">🚀 Continuar para Pagamento</button>
+
+    </form>
+
+    </div>
 
         <div class="como-funciona">
             <h2 style="color: #f57c00; margin-bottom: 20px;">📋 Como Funciona</h2>
-            
             <div class="passo">
                 <div class="passo-numero">1</div>
                 <div>Preencha o formulário com o nome da pessoa e sua mensagem</div>
             </div>
-            
             <div class="passo">
                 <div class="passo-numero">2</div>
                 <div>Realize o pagamento de R$ 5,00 via Mercado Pago (PIX, cartão, etc.)</div>
             </div>
-            
             <div class="passo">
                 <div class="passo-numero">3</div>
                 <div>Após confirmação, sua declaração será entregue pessoalmente!</div>
             </div>
-            
             <div class="passo">
                 <div class="passo-numero">4</div>
                 <div>A pessoa especial receberá sua mensagem com todo carinho! 💖</div>
             </div>
         </div>
-
-        <div class="mercadopago-info">
-            <h3>🛡️ Pagamento Seguro com Mercado Pago</h3>
-            <p>Aceitamos PIX, cartão de crédito, débito e outras formas de pagamento</p>
-        </div>
-
-        <div class="info-section">
-            <h2>💸 Outras Formas de Pagamento</h2>
-            
-            <h3>Pagamento em Dinheiro</h3>
-            <p>Procure alguém do 3º ano do Ensino Médio, se identifique com seu nome e série, e nos entregue sua carta e o nome da pessoa junto com o pagamento de <strong>R$ 5,00</strong>.</p>
-        </div>
-
-        <div class="seguranca">
-            <h2>🔒 Privacidade e Segurança</h2>
-            <p>
-                <strong>Pode ficar tranquilo!</strong> Não leremos sua carta para a pessoa remetente ou da nossa equipe.
-                Estaremos organizando tudo para que sua mensagem chegue ao destinatário com todo o carinho e cuidado, 
-                sem conhecimento prévio de nenhum indivíduo.
-            </p>
-            <p><strong>A privacidade é nossa prioridade!</strong></p>
-            
-            <h3>🛡️ Segurança do Pagamento</h3>
-            <p>
-                Todos os pagamentos são processados pelo <strong>Mercado Pago</strong>, uma das plataformas de pagamento 
-                mais seguras do Brasil. Seus dados financeiros estão protegidos com criptografia de ponta.
-            </p>
-        </div>
-
-        <div class="aviso-importante">
-            <h3>⚠️ Importante para o Desenvolvedor</h3>
-            <p>
-                <strong>Este sistema requer configuração adicional:</strong><br>
-                1. Obter chaves de API do Mercado Pago<br>
-                2. Configurar webhook para confirmação de pagamentos<br>
-                3. Implementar backend para processar pagamentos com segurança<br>
-                4. Atualizar a chave pública no JavaScript
-            </p>
-        </div>
+        
     </main>
 
     <script src="https://sdk.mercadopago.com/js/v2"></script>
     <script src="./src/js/index.js"></script>
+    <script>
+        function validarFormulario() {
+            const mensagem = document.getElementById("message").value.trim();
+            if (mensagem.length < 10) {
+                alert("A mensagem precisa ter no mínimo 10 caracteres!");
+                return false;
+            }
+            return true;
+        }
+    </script>
 </body>
 </html>
