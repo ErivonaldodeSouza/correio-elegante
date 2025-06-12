@@ -32,7 +32,7 @@
         <li><span class="item">Carta + QR Code com música dedicada</span><span class="preco">R$ 2,50</span></li>
         <li><span class="item">Carta + Sonho de Valsa</span><span class="preco">R$ 4,00</span></li>
         <li><span class="item">Carta + Fini Beijinho</span><span class="preco">R$ 4,50</span></li>
-        <li><span class="item">Carta + Mini Buquê de Sonho de Valsa (unidade)</span><span class="preco">R$ 17,00</span></li>
+        <li><span class="item">Carta + Mini Buquê de Sonho de Valsa (unidade)</span><span class="preco">R$ 7,00</span></li>
     </ul>
     <p class="precos-aviso"><small>💳 Encomendas apenas presencialmente</small></p>
 
@@ -49,47 +49,37 @@
     <input type="text" name="_gotcha" style="display:none">
 
     <!-- redirecionamento opcional após envio -->
-    <input type="hidden" name="_redirect" value="https://sua-pagina-de-agradecimento.com">
-
-    <button type="submit">🚀 Continuar para Pagamento</button>
+    <input type="hidden" name="_redirect" value="obrigado.html">
+    
+    <button type="submit">🚀 Enviar</button>
 
     </form>
 
     </div>
 
-        <div class="como-funciona">
-            <h2 style="color: #f57c00; margin-bottom: 20px;">📋 Como Funciona</h2>
-            <div class="passo">
-                <div class="passo-numero">1</div>
-                <div>Preencha o formulário com o nome da pessoa e sua mensagem</div>
-            </div>
-            <div class="passo">
-                <div class="passo-numero">2</div>
-                <div>Realize o pagamento de R$ 5,00 via Mercado Pago (PIX, cartão, etc.)</div>
-            </div>
-            <div class="passo">
-                <div class="passo-numero">3</div>
-                <div>Após confirmação, sua declaração será entregue pessoalmente!</div>
-            </div>
-            <div class="passo">
-                <div class="passo-numero">4</div>
-                <div>A pessoa especial receberá sua mensagem com todo carinho! 💖</div>
-            </div>
-        </div>
-        
+<div class="como-funciona">
+    <h2 style="color: #f57c00; margin-bottom: 20px;">📋 Como Funciona</h2>
+    
+    <div class="passo">
+        <div class="passo-numero">1</div>
+        <div>Preencha o formulário com o nome da pessoa e sua mensagem</div>
+    </div>
+    
+    <div class="passo">
+        <div class="passo-numero">2</div>
+        <div>Após confirmação, sua declaração será entregue pessoalmente!</div>
+    </div>
+    
+    <div class="passo">
+        <div class="passo-numero">3</div>
+        <div>A pessoa especial receberá sua mensagem com todo carinho! 💖</div>
+    </div>
+</div>
+
+
     </main>
 
-    <script src="https://sdk.mercadopago.com/js/v2"></script>
     <script src="./src/js/index.js"></script>
-    <script>
-        function validarFormulario() {
-            const mensagem = document.getElementById("message").value.trim();
-            if (mensagem.length < 10) {
-                alert("A mensagem precisa ter no mínimo 10 caracteres!");
-                return false;
-            }
-            return true;
-        }
-    </script>
+>
 </body>
 </html>
